@@ -1,6 +1,12 @@
+"""
+Create own implementation of built-in max() function using reduce().
+"""
+
+
 from typing import Iterable
+import functools
 
 
-def max(l: Iterable[int]) -> int:
-
-    return 7
+def max_(lst: Iterable[int]) -> int:
+    """My build-in max() function"""
+    return functools.reduce(lambda x, y: x if x > y else y, lst)
