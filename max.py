@@ -1,6 +1,14 @@
-from typing import Iterable
+"""imports"""
+from functools import reduce
 
 
-def max(l: Iterable[int]) -> int:
+def max_(lst) -> int:
+    """max"""
+    maximal = lst[0]
 
-    return 7
+    def change_local(_, ele):
+        nonlocal maximal
+        if ele > maximal:
+            maximal = ele
+    reduce(change_local, lst)
+    return maximal
