@@ -1,6 +1,16 @@
-from typing import Iterable
+"""
+docstring
+"""
 
 
-def max(l: Iterable[int]) -> int:
+def max_(lst) -> int:
+    """
 
-    return 7
+    :param lst:
+    :return:
+    """
+    maximum = lst[0]
+    for i in lst:
+        if i > maximum:
+            maximum = i
+    return maximum
