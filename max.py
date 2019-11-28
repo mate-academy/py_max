@@ -1,7 +1,7 @@
 """
 docstring
 """
-
+from functools import reduce
 
 def max_(lst) -> int:
     """
@@ -9,8 +9,4 @@ def max_(lst) -> int:
     :param lst:
     :return:
     """
-    maximum = lst[0]
-    for i in lst:
-        if i > maximum:
-            maximum = i
-    return maximum
+    return reduce(lambda x, y: x if x > y else y, lst)
