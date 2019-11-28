@@ -1,6 +1,12 @@
-from typing import Iterable
+"""
+docstring
+"""
+from functools import reduce
 
+def max_(lst) -> int:
+    """
 
-def max(l: Iterable[int]) -> int:
-
-    return 7
+    :param lst:
+    :return:
+    """
+    return reduce(lambda x, y: x if x > y else y, lst)
